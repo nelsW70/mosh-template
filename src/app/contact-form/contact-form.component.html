@@ -43,5 +43,14 @@
       class="form-control"
     ></textarea>
   </div>
-  <button [disabled]="f.invalid" class="btn btn-primary">Submit</button>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" ngModel name="isSubscribed" />
+      Subscribe to mailing list
+    </label>
+  </div>
+  <p>
+    {{ f.value | json }}
+  </p>
+  <button [disabled]="!f.valid" class="btn btn-primary">Submit</button>
 </form>
