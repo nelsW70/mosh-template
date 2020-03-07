@@ -63,16 +63,10 @@
       </option>
     </select>
   </div>
-  <div class="radio">
+  <div *ngFor="let method of contactMethods" class="radio">
     <label>
-      <input ngModel type="radio" name="contactMethod" value="1" />
-      Email
-    </label>
-  </div>
-  <div class="radio">
-    <label>
-      <input ngModel type="radio" name="contactMethod" value="2" />
-      Phone
+      <input ngModel type="radio" name="contactMethod" [value]="method.id" />
+      {{ method.name }}
     </label>
   </div>
   <p>
